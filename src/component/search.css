@@ -1,0 +1,207 @@
+/* search.css */
+.search-container {
+  padding-top: 50px;
+  max-width: 600px;
+  margin: auto;
+  transform: translateY(-60px); /* Initial position off-screen */
+  animation: slideIn 0.5s ease forwards; /* Apply slideIn animation */
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px); /* Slide in from top */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Slide in to original position */
+  }
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Adjusted width */
+  font-size: 16px;
+  height: 50px;
+}
+
+.search-button {
+  position: relative;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  right: 12%;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin-left: -40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+.search-results {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 60rem;
+  position: relative;
+  left: -35%;
+  height: 21rem;
+  opacity: 0;
+  transform: translateY(-60px); /* Initial position off-screen */
+  animation: slideIn 0.5s ease forwards; /* Apply slideIn animation */
+}
+
+.result-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.result-item img{
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  width: 45%;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  height: 13rem;
+  width: 15rem;
+}
+
+.result-item p,
+.result-item a {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 45%;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  height:19rem;
+  width:20rem;
+}
+
+.result-item img:hover {
+  transform: scale(1.1); /* Apply zoom effect on hover for images */
+}
+
+.result-item p:hover {
+  transform: scale(1.1); /* Apply zoom effect on hover for paragraphs */
+}
+
+.result-item a:hover {
+  transform: scale(1.1); /* Apply zoom effect on hover for links */
+}
+
+.result-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for additional info */
+.additional-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popular-tag,
+.followers,
+.item-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 45%;
+  margin: 20px;
+}
+
+.popular-tag h3,
+.followers h3,
+.item-box p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.popular-tag p,
+.followers p,
+.item-box p {
+  font-size: 16px;
+  margin: 0;
+}
+.popular-tag:hover,
+.followers:hover {
+  transform: scale(1.3); /* Apply zoom effect on hover */
+}
+.first-container {
+  display: block;
+}
+
+.second-container {
+  display: block;
+}
+
+.first-container.hidden {
+  display: none;
+}
+
+.second-container.hidden {
+  display: none;
+}
+
+.popular-tag,
+.followers {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 45%;
+  margin: 20px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.popular-tag.show,
+.followers.show {
+  opacity: 1;
+  transform: translateY(0); /* Apply slideIn animation */
+}
+
+.popular-tag:hover,
+.followers:hover {
+  transform: scale(2.3); /* Apply zoom effect on hover */
+}
+
+.result-item .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.charts-container {
+  padding-top:20px;
+  padding-bottom:40px;
+  display: flex;
+  justify-content: space-around; /* or any other appropriate value */
+}
+.chart{
+  animation: slideIn 0.5s ease forwards;
+}
+.chart:hover{
+  transform: scale(1.2);
+}
